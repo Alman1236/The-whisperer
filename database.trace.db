@@ -1,0 +1,1396 @@
+2022-06-21 09:06:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]Modify"; expected "MERGE"; SQL statement:
+Modify [42001-212]
+2022-06-21 09:09:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]ADD INTO ROOMS VALUES(""Corridoio"", ""Ti trovi in un corridoio molto spazioso e illuminato"")"; expected "ALTER, ANALYZE"; SQL statement:
+ADD INTO ROOMS VALUES("Corridoio", "Ti trovi in un corridoio molto spazioso e illuminato") [42001-212]
+2022-06-21 09:09:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]ADD INTO ROOMS VALUES( (""Corridoio"", ""Ti trovi in un corridoio molto spazioso e illuminato""))"; expected "ALTER, ANALYZE"; SQL statement:
+ADD INTO ROOMS VALUES( ("Corridoio", "Ti trovi in un corridoio molto spazioso e illuminato")) [42001-212]
+2022-06-21 09:10:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]ADD INTO ROOMS(NAME, DESCRIZIONE) VALUES( (""Corridoio"", ""Ti trovi in un corridoio molto spazioso e illuminato""))"; expected "ALTER, ANALYZE"; SQL statement:
+ADD INTO ROOMS(NAME, DESCRIZIONE) VALUES( ("Corridoio", "Ti trovi in un corridoio molto spazioso e illuminato")) [42001-212]
+2022-06-21 09:12:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO ROOMS
+VALUES (("Corridoio", "Ti trovi in un corridoio molto spazioso e illuminato")) [21002-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.command.dml.Insert.doPrepare(Insert.java:295)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:574)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:189)
+	at org.h2.server.web.WebThread.run(WebThread.java:102)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-21 09:13:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO ROOMS(NAME, DESCRIZIONE)
+VALUES (("Corridoio", "Ti trovi in un corridoio molto spazioso e illuminato")) [21002-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.command.dml.Insert.doPrepare(Insert.java:295)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:574)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:189)
+	at org.h2.server.web.WebThread.run(WebThread.java:102)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-21 09:17:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ROOMS\000d\000a10VALUES ('Camera da letto principale NE', 'C'è qualcuno che dorme nel letto. La stanza è piena di cianfrusaglie inutili ma costose,...[*]')"; SQL statement:
+INSERT INTO ROOMS
+10VALUES ('Camera da letto principale NE', 'C'è qualcuno che dorme nel letto. La stanza è piena di cianfrusaglie inutili ma costose,...') [42000-212]
+2022-06-21 09:17:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ROOMS\000d\000a10VALUES ('Camera da letto principale NE', 'C'è qualcuno che dorme nel letto. La stanza è piena di cianfrusaglie inutili ma costose,...[*]');"; SQL statement:
+INSERT INTO ROOMS
+10VALUES ('Camera da letto principale NE', 'C'è qualcuno che dorme nel letto. La stanza è piena di cianfrusaglie inutili ma costose,...'); [42000-212]
+2022-06-21 09:18:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ROOMS\000d\000aVALUES ('Camera da letto principale NE', 'C'è qualcuno che dorme nel letto. La stanza è piena di cianfrusaglie inutili ma costose,...[*]');"; SQL statement:
+INSERT INTO ROOMS
+VALUES ('Camera da letto principale NE', 'C'è qualcuno che dorme nel letto. La stanza è piena di cianfrusaglie inutili ma costose,...'); [42000-212]
+2022-06-21 09:18:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ROOMS\000d\000aVALUES ('Camera da letto', 'C'è qualcuno che dorme nel letto. La stanza è piena di cianfrusaglie inutili ma costose,...[*]');"; SQL statement:
+INSERT INTO ROOMS
+VALUES ('Camera da letto', 'C'è qualcuno che dorme nel letto. La stanza è piena di cianfrusaglie inutili ma costose,...'); [42000-212]
+2022-06-21 09:19:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ROOMS\000d\000aVALUES ('Dormitorio', 'E' pieno di gente qui, meglio andare via[*]');"; SQL statement:
+INSERT INTO ROOMS
+VALUES ('Dormitorio', 'E' pieno di gente qui, meglio andare via'); [42000-212]
+2022-06-21 09:20:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ROOMS\000d\000aVALUES ('Dormitorio', 'E' pieno di gente qui, meglio andare via[*]')"; SQL statement:
+INSERT INTO ROOMS
+VALUES ('Dormitorio', 'E' pieno di gente qui, meglio andare via') [42000-212]
+2022-06-21 09:20:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ROOMS\000d\000aVALUES ('Dormitorio', 'E' pieno di gente qui, meglio andare via[*]')"; SQL statement:
+INSERT INTO ROOMS
+VALUES ('Dormitorio', 'E' pieno di gente qui, meglio andare via') [42000-212]
+2022-06-21 09:20:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ROOMS\000d\000aVALUES ('Dormitorio', 'E' pieno di gente qui, meglio andare via[*]')"; SQL statement:
+INSERT INTO ROOMS
+VALUES ('Dormitorio', 'E' pieno di gente qui, meglio andare via') [42000-212]
+2022-06-21 09:20:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ROOMS\000d\000aVALUES ('Dormitorio', 'E' pieno di gente qui, meglio andare via[*]')"; SQL statement:
+INSERT INTO ROOMS
+VALUES ('Dormitorio', 'E' pieno di gente qui, meglio andare via') [42000-212]
+2022-06-21 10:07:02 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TEST" not found; SQL statement:
+INSERT INTO TEST VALUES('Camera da letto principale', 'Ci sono 2 persone nel letto. La stanza è piena di cianfrusaglie inutili ma costose') [42102-212]
+2022-06-21 10:07:11 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "NAME CHARACTER VARYING(25)": "'Camera da letto principale' (26)"; SQL statement:
+INSERT INTO ROOMS VALUES('Camera da letto principale', 'Ci sono 2 persone nel letto. La stanza è piena di cianfrusaglie inutili ma costose') [22001-212]
+2022-06-21 10:08:53 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.main(App.java:32)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 18 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 12 more
+2022-06-21 10:09:11 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.main(App.java:32)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 18 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 12 more
+2022-06-21 10:10:34 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.main(App.java:32)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 18 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 12 more
+2022-06-21 10:11:12 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.main(App.java:32)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 18 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 12 more
+2022-06-21 11:33:50 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.main(App.java:32)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 18 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 12 more
+2022-06-22 11:34:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ROOMS\000d\000a[*]FOREIGN KEY (NORTH_ROOM) REFERENCES ROOMS(NAME)"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE ROOMS
+FOREIGN KEY (NORTH_ROOM) REFERENCES ROOMS(NAME) [42001-212]
+2022-06-22 11:35:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Constraint "PRIMARY KEY | UNIQUE (NAME)" not found; SQL statement:
+ALTER TABLE ROOMS
+ADD FOREIGN KEY (NORTH_ROOM) REFERENCES ROOMS(NAME) [90057-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:258)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:72)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:174)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:189)
+	at org.h2.server.web.WebThread.run(WebThread.java:102)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-22 11:36:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ROOMS\000d\000aSET [*]PRIMARY KEY (NAME)"; expected "REFERENTIAL_INTEGRITY"; SQL statement:
+ALTER TABLE ROOMS
+SET PRIMARY KEY (NAME) [42001-212]
+2022-06-22 11:38:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ROOMS\000d\000aSET [*]PRIMARY KEY ROOMS(NAME)"; expected "REFERENTIAL_INTEGRITY"; SQL statement:
+ALTER TABLE ROOMS
+SET PRIMARY KEY ROOMS(NAME) [42001-212]
+2022-06-22 11:39:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ROOMS\000d\000aSET [*]KEY ROOMS(NAME) PRIMARY"; expected "REFERENTIAL_INTEGRITY"; SQL statement:
+ALTER TABLE ROOMS
+SET KEY ROOMS(NAME) PRIMARY [42001-212]
+2022-06-22 11:40:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ROOMS\000d\000a[*]MODIFY COLUMN NAME PRIMARY KEY"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE ROOMS
+MODIFY COLUMN NAME PRIMARY KEY [42001-212]
+2022-06-22 11:40:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "PRIMARY"; SQL statement:
+ALTER TABLE ROOMS
+ALTER COLUMN NAME PRIMARY KEY [50004-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readIfDataType1(Parser.java:6199)
+	at org.h2.command.Parser.readIfDataType(Parser.java:6040)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:6022)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5897)
+	at org.h2.command.Parser.parseAlterTableAlterColumnType(Parser.java:8920)
+	at org.h2.command.Parser.parseAlterTableAlter(Parser.java:8555)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:8469)
+	at org.h2.command.Parser.parseAlter(Parser.java:7522)
+	at org.h2.command.Parser.parsePrepared(Parser.java:747)
+	at org.h2.command.Parser.parse(Parser.java:691)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:568)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:189)
+	at org.h2.server.web.WebThread.run(WebThread.java:102)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-22 11:40:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "PRIMARYKEY"; SQL statement:
+ALTER TABLE ROOMS
+ALTER COLUMN NAME PRIMARYKEY [50004-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readIfDataType1(Parser.java:6199)
+	at org.h2.command.Parser.readIfDataType(Parser.java:6040)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:6022)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5897)
+	at org.h2.command.Parser.parseAlterTableAlterColumnType(Parser.java:8920)
+	at org.h2.command.Parser.parseAlterTableAlter(Parser.java:8555)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:8469)
+	at org.h2.command.Parser.parseAlter(Parser.java:7522)
+	at org.h2.command.Parser.parsePrepared(Parser.java:747)
+	at org.h2.command.Parser.parse(Parser.java:691)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:568)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:189)
+	at org.h2.server.web.WebThread.run(WebThread.java:102)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-22 11:41:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "NAME" must not be nullable; SQL statement:
+ALTER TABLE ROOMS
+ADD PRIMARY KEY (NAME) [90023-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.mvstore.db.MVTable.prepareColumns(MVTable.java:918)
+	at org.h2.mvstore.db.MVTable.addIndex(MVTable.java:337)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:147)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:72)
+	at org.h2.command.ddl.AlterTable.update(AlterTable.java:46)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:174)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:189)
+	at org.h2.server.web.WebThread.run(WebThread.java:102)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-22 11:42:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ROOMS\000d\000a[*]MODIFY COLUMN NAME NOTNULL"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE ROOMS
+MODIFY COLUMN NAME NOTNULL [42001-212]
+2022-06-22 11:43:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ROOMS\000d\000aALTER COLUMN NAME VARCHAR(100) NOT NULL [*]UNIQUE"; SQL statement:
+ALTER TABLE ROOMS
+ALTER COLUMN NAME VARCHAR(100) NOT NULL UNIQUE [42000-212]
+2022-06-22 11:44:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ROOMS\000d\000aALTER COLUMN NAME VARCHAR(100) [*]UNIQUE NOT NULL"; SQL statement:
+ALTER TABLE ROOMS
+ALTER COLUMN NAME VARCHAR(100) UNIQUE NOT NULL [42000-212]
+2022-06-22 11:44:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ROOMS\000d\000aALTER COLUMN NAME VARCHAR(100) [*]UNIQUE"; SQL statement:
+ALTER TABLE ROOMS
+ALTER COLUMN NAME VARCHAR(100) UNIQUE [42000-212]
+2022-06-22 11:47:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ROOMS\000d\000aRENAME COLUMN [*]FROM NORTH_ROOM TO NORTH_ROOM_NAME"; expected "identifier"; SQL statement:
+ALTER TABLE ROOMS
+RENAME COLUMN FROM NORTH_ROOM TO NORTH_ROOM_NAME [42001-212]
+2022-06-24 10:28:38 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.defineRooms(App.java:120)
+	at core.avventuraTestuale.App.Start(App.java:51)
+	at core.avventuraTestuale.App.main(App.java:31)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-06-24 10:29:03 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.defineRooms(App.java:120)
+	at core.avventuraTestuale.App.Start(App.java:51)
+	at core.avventuraTestuale.App.main(App.java:31)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-06-24 10:38:22 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.defineRooms(App.java:120)
+	at core.avventuraTestuale.App.Start(App.java:51)
+	at core.avventuraTestuale.App.main(App.java:31)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-06-24 10:38:30 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.defineRooms(App.java:120)
+	at core.avventuraTestuale.App.Start(App.java:51)
+	at core.avventuraTestuale.App.main(App.java:31)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-06-24 10:39:52 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.defineRooms(App.java:120)
+	at core.avventuraTestuale.App.Start(App.java:51)
+	at core.avventuraTestuale.App.main(App.java:31)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-06-24 10:46:12 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.defineRooms(App.java:120)
+	at core.avventuraTestuale.App.Start(App.java:51)
+	at core.avventuraTestuale.App.main(App.java:31)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-06-24 11:15:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "DORMITORIO" not found; SQL statement:
+UPDATE ROOMS
+SET 
+    NORTH_ROOM = 'Corridoio',
+EAST_ROOM_NAME = 'Camera da letto principale'
+WHERE
+    NAME = DORMITORIO [42122-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:140)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.dml.Update.doPrepare(Update.java:143)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:574)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:189)
+	at org.h2.server.web.WebThread.run(WebThread.java:102)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-24 11:16:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE ROOMS\000d\000aSET \000d\000a    NORTH_ROOM = 'Corridoio',\000d\000a[*]WHERE\000d\000a    NAME = DORMITORIO"; expected "identifier"; SQL statement:
+UPDATE ROOMS
+SET 
+    NORTH_ROOM = 'Corridoio',
+WHERE
+    NAME = DORMITORIO [42001-212]
+2022-06-24 11:16:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE ROOMS\000d\000aSET \000d\000a    NORTH_ROOM = 'Corridoio',\000d\000a[*]WHERE\000d\000a    NAME = 'Dormitorio'"; expected "identifier"; SQL statement:
+UPDATE ROOMS
+SET 
+    NORTH_ROOM = 'Corridoio',
+WHERE
+    NAME = 'Dormitorio' [42001-212]
+2022-06-24 11:16:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE ROOMS\000d\000aSET \000d\000a    NORTH_ROOM = 'Corridoio',\000d\000a[*]WHERE\000d\000a    NAME = 'Dormitorio'"; expected "identifier"; SQL statement:
+UPDATE ROOMS
+SET 
+    NORTH_ROOM = 'Corridoio',
+WHERE
+    NAME = 'Dormitorio' [42001-212]
+2022-06-24 11:22:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO ROOMS VALUES(
+('Cucina', 'Ambiente caldo', NULL, 'Camera da letto principale', NULL, 'Corridoio')
+) [21002-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.command.dml.Insert.doPrepare(Insert.java:295)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:574)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:189)
+	at org.h2.server.web.WebThread.run(WebThread.java:102)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-24 11:26:45 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.defineRooms(App.java:120)
+	at core.avventuraTestuale.App.Start(App.java:51)
+	at core.avventuraTestuale.App.main(App.java:31)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-06-24 11:27:07 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.defineRooms(App.java:120)
+	at core.avventuraTestuale.App.Start(App.java:51)
+	at core.avventuraTestuale.App.main(App.java:31)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-06-24 11:28:09 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.defineRooms(App.java:120)
+	at core.avventuraTestuale.App.Start(App.java:51)
+	at core.avventuraTestuale.App.main(App.java:31)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-06-27 10:00:09 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.defineRooms(App.java:47)
+	at core.avventuraTestuale.App.StartAdventure(App.java:36)
+	at core.avventuraTestuale.App.main(App.java:32)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-06-28 10:08:10 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.defineRooms(App.java:50)
+	at core.avventuraTestuale.App.StartAdventure(App.java:37)
+	at core.avventuraTestuale.App.main(App.java:33)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-06-28 10:09:05 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at core.avventuraTestuale.App.defineRooms(App.java:50)
+	at core.avventuraTestuale.App.StartAdventure(App.java:37)
+	at core.avventuraTestuale.App.main(App.java:33)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-07-05 14:28:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TABLE_NAME" not found; SQL statement:
+ALTER TABLE table_name
+ALTER COLUMN CONTAINSPERSON  BIT NOT NULL [42102-212]
+2022-07-05 14:28:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TABLE_NAME" not found; SQL statement:
+ALTER TABLE table_name
+ALTER COLUMN CONTAINSPERSON BIT NOT NULL [42102-212]
+2022-07-05 14:29:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "CONTAINSPERSON" contains null values; SQL statement:
+ALTER TABLE ROOMS 
+ALTER COLUMN CONTAINSPERSON BIT NOT NULL [90081-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.AlterTableAlterColumn.checkNoNullValues(AlterTableAlterColumn.java:672)
+	at org.h2.command.ddl.AlterTableAlterColumn.update(AlterTableAlterColumn.java:219)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:174)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:189)
+	at org.h2.server.web.WebThread.run(WebThread.java:102)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-07-05 14:31:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: "PERSON"; SQL statement:
+ALTER TABLE ROOMS 
+ADD CONTAINS PERSON BIT NOT NULL [50004-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readIfDataType1(Parser.java:6199)
+	at org.h2.command.Parser.readIfDataType(Parser.java:6040)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:6022)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5897)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9328)
+	at org.h2.command.Parser.parseAlterTableAddColumn(Parser.java:8991)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:8461)
+	at org.h2.command.Parser.parseAlter(Parser.java:7522)
+	at org.h2.command.Parser.parsePrepared(Parser.java:747)
+	at org.h2.command.Parser.parse(Parser.java:691)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:568)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1103)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1090)
+	at org.h2.server.web.WebThread.process(WebThread.java:189)
+	at org.h2.server.web.WebThread.run(WebThread.java:102)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-07-06 09:19:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE ROOMS \000d\000aADD [*]DEFAULT 0 FOR CONTAINSPERSON"; expected "identifier"; SQL statement:
+ALTER TABLE ROOMS 
+ADD DEFAULT 0 FOR CONTAINSPERSON [42001-212]
+2022-07-09 17:43:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-09 17:43:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-09 17:43:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-09 17:43:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-09 17:44:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-09 17:44:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-09 17:46:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-09 17:46:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-09 17:54:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-09 17:54:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-09 18:00:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-09 18:00:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-10 17:30:16 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at adventureLogic.App.defineRooms(App.java:53)
+	at adventureLogic.App.startAdventure(App.java:38)
+	at adventureLogic.App.main(App.java:34)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-07-10 17:31:01 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at adventureLogic.App.defineRooms(App.java:53)
+	at adventureLogic.App.startAdventure(App.java:38)
+	at adventureLogic.App.main(App.java:34)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-07-10 17:31:16 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at adventureLogic.App.defineRooms(App.java:53)
+	at adventureLogic.App.startAdventure(App.java:38)
+	at adventureLogic.App.main(App.java:34)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-07-10 17:50:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-10 17:50:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-11 15:06:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-11 15:06:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-11 15:30:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-11 15:30:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (ROOMS: ""CONTAINSPERSON"" BOOLEAN DEFAULT 0)"; SQL statement:
+INSERT INTO "PUBLIC"."ROOMS"("NAME","DESCRIPTION","NORTH_ROOM","SOUTH_ROOM_NAME","EAST_ROOM_NAME","WEST_ROOM_NAME","OBJECTINROOM","CONTAINSPERSON","ISLOCKED")VALUES(?,?,?,?,?,?,?,?,?) [22018-212]
+2022-07-12 12:59:13 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at adventureLogic.App.defineRooms(App.java:57)
+	at adventureLogic.App.startAdventure(App.java:34)
+	at adventureLogic.App.main(App.java:30)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/1236a/eclipse-workspace/avventuraTestuale/database.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 14 more
+2022-07-13 08:49:42 jdbc[4]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at adventureLogic.App.defineRooms(App.java:57)
+	at adventureLogic.App.startAdventure(App.java:32)
+	at adventureLogic.Parser.registerName(Parser.java:60)
+	at adventureLogic.Parser.parse(Parser.java:19)
+	at adventureLogic.MainFrame$2.actionPerformed(MainFrame.java:85)
+	at java.desktop/javax.swing.JTextField.fireActionPerformed(JTextField.java:525)
+	at java.desktop/javax.swing.JTextField.postActionEvent(JTextField.java:740)
+	at java.desktop/javax.swing.JTextField$NotifyAction.actionPerformed(JTextField.java:856)
+	at java.desktop/javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1810)
+	at java.desktop/javax.swing.JComponent.processKeyBinding(JComponent.java:2947)
+	at java.desktop/javax.swing.JComponent.processKeyBindings(JComponent.java:2995)
+	at java.desktop/javax.swing.JComponent.processKeyEvent(JComponent.java:2909)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6403)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5001)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4833)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1952)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:883)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1150)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:1020)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:848)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4882)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4833)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:722)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:716)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:746)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:744)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:743)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 51 more
+2022-07-13 08:51:40 jdbc[4]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at adventureLogic.App.defineRooms(App.java:57)
+	at adventureLogic.App.startAdventure(App.java:32)
+	at adventureLogic.Parser.registerName(Parser.java:60)
+	at adventureLogic.Parser.parse(Parser.java:19)
+	at adventureLogic.MainFrame$2.actionPerformed(MainFrame.java:85)
+	at java.desktop/javax.swing.JTextField.fireActionPerformed(JTextField.java:525)
+	at java.desktop/javax.swing.JTextField.postActionEvent(JTextField.java:740)
+	at java.desktop/javax.swing.JTextField$NotifyAction.actionPerformed(JTextField.java:856)
+	at java.desktop/javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1810)
+	at java.desktop/javax.swing.JComponent.processKeyBinding(JComponent.java:2947)
+	at java.desktop/javax.swing.JComponent.processKeyBindings(JComponent.java:2995)
+	at java.desktop/javax.swing.JComponent.processKeyEvent(JComponent.java:2909)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6403)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5001)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4833)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1952)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:883)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1150)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:1020)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:848)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4882)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4833)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:722)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:716)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:746)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:744)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:743)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 51 more
+2022-07-13 08:56:58 jdbc[4]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at adventureLogic.App.defineRooms(App.java:57)
+	at adventureLogic.App.startAdventure(App.java:32)
+	at adventureLogic.Parser.registerName(Parser.java:60)
+	at adventureLogic.Parser.parse(Parser.java:19)
+	at adventureLogic.MainFrame$2.actionPerformed(MainFrame.java:85)
+	at java.desktop/javax.swing.JTextField.fireActionPerformed(JTextField.java:525)
+	at java.desktop/javax.swing.JTextField.postActionEvent(JTextField.java:740)
+	at java.desktop/javax.swing.JTextField$NotifyAction.actionPerformed(JTextField.java:856)
+	at java.desktop/javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1810)
+	at java.desktop/javax.swing.JComponent.processKeyBinding(JComponent.java:2947)
+	at java.desktop/javax.swing.JComponent.processKeyBindings(JComponent.java:2995)
+	at java.desktop/javax.swing.JComponent.processKeyEvent(JComponent.java:2909)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6403)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5001)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4833)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1952)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:883)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1150)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:1020)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:848)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4882)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4833)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:722)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:716)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:746)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:744)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:743)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 51 more
+2022-07-13 08:59:51 jdbc[4]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at adventureLogic.App.defineRooms(App.java:57)
+	at adventureLogic.App.startAdventure(App.java:32)
+	at adventureLogic.Parser.handleCommand(Parser.java:97)
+	at adventureLogic.Parser.parse(Parser.java:36)
+	at adventureLogic.MainFrame$2.actionPerformed(MainFrame.java:85)
+	at java.desktop/javax.swing.JTextField.fireActionPerformed(JTextField.java:525)
+	at java.desktop/javax.swing.JTextField.postActionEvent(JTextField.java:740)
+	at java.desktop/javax.swing.JTextField$NotifyAction.actionPerformed(JTextField.java:856)
+	at java.desktop/javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1810)
+	at java.desktop/javax.swing.JComponent.processKeyBinding(JComponent.java:2947)
+	at java.desktop/javax.swing.JComponent.processKeyBindings(JComponent.java:2995)
+	at java.desktop/javax.swing.JComponent.processKeyEvent(JComponent.java:2909)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6403)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5001)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4833)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1952)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:883)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1150)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:1020)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:848)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4882)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4833)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:722)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:716)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:746)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:744)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:743)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 51 more
+2022-07-14 14:05:25 jdbc[4]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at adventureLogic.App.defineRooms(App.java:55)
+	at adventureLogic.App.startAdventure(App.java:30)
+	at adventureLogic.Parser.registerName(Parser.java:60)
+	at adventureLogic.Parser.parse(Parser.java:19)
+	at adventureLogic.MainFrame$2.actionPerformed(MainFrame.java:81)
+	at java.desktop/javax.swing.JTextField.fireActionPerformed(JTextField.java:525)
+	at java.desktop/javax.swing.JTextField.postActionEvent(JTextField.java:740)
+	at java.desktop/javax.swing.JTextField$NotifyAction.actionPerformed(JTextField.java:856)
+	at java.desktop/javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1810)
+	at java.desktop/javax.swing.JComponent.processKeyBinding(JComponent.java:2947)
+	at java.desktop/javax.swing.JComponent.processKeyBindings(JComponent.java:2995)
+	at java.desktop/javax.swing.JComponent.processKeyEvent(JComponent.java:2909)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6403)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5001)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4833)
+	at java.desktop/java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1952)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:883)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1150)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:1020)
+	at java.desktop/java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:848)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4882)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4833)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:722)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:716)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:746)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:744)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:743)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 51 more
